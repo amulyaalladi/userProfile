@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         $PHPIZE_DEPS \
         git unzip libzip-dev libssl-dev libcurl4-openssl-dev pkg-config ca-certificates \
     && docker-php-ext-install pdo_mysql zip \
-    && pecl install redis mongodb \
+    && pecl install redis mongodb-1.21.0 \
     && docker-php-ext-enable redis mongodb \
     && php -m | grep -qi '^mongodb$' \
     && php -m | grep -qi '^redis$' \
