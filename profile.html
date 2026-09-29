@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - GUVI Internship App</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h3 class="brand-title mb-0">My Profile</h3>
+                <button type="button" id="logoutBtn" class="btn btn-outline-danger btn-sm">Logout</button>
+            </div>
+
+            <div id="alertBox" class="alert" role="alert"></div>
+
+            <div class="mb-4">
+                <p class="mb-1"><strong>Username:</strong> <span id="profileUsername">-</span></p>
+                <p class="mb-0"><strong>Email:</strong> <span id="profileEmail">-</span></p>
+            </div>
+
+            <hr>
+
+            <h5 class="mb-3">Additional Details</h5>
+
+            <form id="profileForm" novalidate>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="age" class="form-label">Age</label>
+                        <input type="number" min="0" class="form-control" id="age" placeholder="e.g. 24">
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="dob" class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control" id="dob">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="contact" class="form-label">Contact Number</label>
+                    <input type="text" class="form-control" id="contact" placeholder="e.g. +91 98765 43210">
+                </div>
+
+                <div class="mb-3">
+                    <label for="address" class="form-label">Address</label>
+                    <textarea class="form-control" id="address" rows="3" placeholder="Your address"></textarea>
+                </div>
+
+                <button type="button" id="saveProfileBtn" class="btn btn-success w-100">
+                    <span id="saveProfileBtnText">Save Changes</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="js/api.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="auth-card">
+        <h2>Welcome Back!</h2>
+        
+        <p>Login to your account</p>
+        <div id="alertBox" class="alert" role="alert"></div>
+      <form id="loginForm">
+        <div class="mb-3">
+            <label for="loginIdentifier" class="form-label">Username or Email</label>
+            <input type="text" class="form-control" id="loginIdentifier" name="email" placeholder="enter your email...">
+        </div>
+
+        <div class="mb-3">
+            <label for="loginPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="loginPassword" name="password" placeholder="enter your password...">
+
+        </div>
+
+        <button type="button" id="loginBtn" class="btn btn-primary w-100">
+            <span id="loginBtnText">Login</span>
+    </button>
+        
+       
+      </form>
+       <p>Don't have an account?
+        <a href="register.html">Register here.</a>
+        </p>
+      </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="js/api.js"></script>
+<script src="js/login.js"></script>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+.git
+*.html
+css
+js
+assests
+README.md
+netlify.toml
+render.yaml

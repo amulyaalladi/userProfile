@@ -1,0 +1,11 @@
+{
+    "name": "amulya/user-profile-app",
+    "description": "Register > Login > Profile assignment",
+    "require": {
+        "php": ">=7.4",
+        "mongodb/mongodb": "^1.17",
+        "ext-pdo": "*",
+        "ext-redis": "*",
+        "ext-mongodb": "*"
+    }
+}

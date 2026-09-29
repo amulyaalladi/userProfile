@@ -1,0 +1,4 @@
+# Netlify hosts ONLY the static frontend. PHP runs on Render.
+[build]
+  command = "mkdir -p dist && cp *.html dist/ && cp -r css js assests dist/"
+  publish = "dist"

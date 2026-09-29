@@ -1,0 +1,37 @@
+# Render Blueprint: describes the PHP backend service.
+# Secret values are entered in the Render dashboard (sync: false), never stored in Git.
+services:
+  - type: web
+    name: userprofile-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /php/health.php
+    envVars:
+      - key: ALLOWED_ORIGIN
+        sync: false
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASS
+        sync: false
+      - key: DB_SSL
+        value: "true"
+      - key: MONGO_URI
+        sync: false
+      - key: MONGO_DB_NAME
+        value: userProfile
+      - key: REDIS_HOST
+        sync: false
+      - key: REDIS_PORT
+        sync: false
+      - key: REDIS_USERNAME
+        sync: false
+      - key: REDIS_PASSWORD
+        sync: false
+      - key: REDIS_TLS
+        value: "true"
