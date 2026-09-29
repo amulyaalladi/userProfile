@@ -1,12 +1,17 @@
 # PHP backend image (deployed on Render).
 FROM php:8.2-apache
 
+# $PHPIZE_DEPS is provided by the base image and includes gcc, make, autoconf, etc.
+# pecl install compiles extensions from source, so this toolchain must be present first.
 RUN apt-get update && apt-get install -y --no-install-recommends \
+        $PHPIZE_DEPS \
         git unzip libzip-dev libssl-dev libcurl4-openssl-dev pkg-config ca-certificates \
     && docker-php-ext-install pdo_mysql zip \
     && pecl install redis mongodb \
     && docker-php-ext-enable redis mongodb \
-    && rm -rf /var/lib/apt/lists/*
+    && php -m | grep -qi '^mongodb$' \
+    && php -m | grep -qi '^redis$' \
+    && rm -rf /var/lib/apt/lists/* /tmp/pear
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
